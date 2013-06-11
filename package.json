@@ -1,0 +1,40 @@
+{
+  "name": "rle-ndarray",
+  "version": "0.0.0",
+  "description": "Convert between ndarrays and rle volumes",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "ndarray": "~0.2.4",
+    "rle-core": "~0.0.7",
+    "rle-repair": "~0.0.4",
+    "rle-extents": "0.0.0"
+  },
+  "devDependencies": {
+    "ndarray-fill": "~0.0.0",
+    "tape": "~1.0.4"
+  },
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikolalysenko/rle-ndarray.git"
+  },
+  "keywords": [
+    "ndarray",
+    "rle",
+    "volume",
+    "voxel",
+    "convert"
+  ],
+  "author": "Mikola Lysenko",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "6fd8cb7b6122d5236e754144fc2523ed0023d312",
+  "bugs": {
+    "url": "https://github.com/mikolalysenko/rle-ndarray/issues"
+  }
+}
