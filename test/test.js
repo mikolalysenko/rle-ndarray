@@ -1,3 +1,4 @@
+var zeros = require("zeros")
 var ndarray = require("ndarray")
 var fill = require("ndarray-fill")
 var conv = require("../index.js")
@@ -5,7 +6,7 @@ var conv = require("../index.js")
 require("tape")(function(t) {
 
   function checkFunc(shape, f) {
-    var x = ndarray.zeros(shape, "int32")
+    var x = zeros(shape)
     fill(x, f)
     var vol = conv.array2rle([0,0,0], x)
     var y = conv.rle2array(vol, [[0,0,0], shape]).phase

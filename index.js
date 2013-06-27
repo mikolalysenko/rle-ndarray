@@ -9,13 +9,15 @@ function rle2array(volume, bounds) {
   if(!bounds) {
     bounds = extents(volume)
   }
-  var dims = [0,0,0], i, j, k, n = volume.length()
+  var dims = [0,0,0], i, j, k, n = volume.length(), size = 1, stride = [0,0,0]
   for(i=0; i<3; ++i) {
     dims[i] = (bounds[1][i] - bounds[0][i])|0
+    stride[i] = size
+    size *= dims[i]
   }
-  var phase = ndarray.zeros(dims, "int32", [0,1,2])
-  var distance = ndarray.zeros(dims, "float32", [0,1,2])
-  var ptr = ndarray.size(phase)
+  var phase = ndarray(new Int32Array(size), dims, stride, 0)
+  var distance = ndarray(new Float32Array(size), dims, stride, 0)
+  var ptr = size
   var X = volume.coords[0],
       Y = volume.coords[1],
       Z = volume.coords[2],

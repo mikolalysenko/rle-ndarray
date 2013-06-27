@@ -1,20 +1,21 @@
 {
   "name": "rle-ndarray",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Convert between ndarrays and rle volumes",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "ndarray": "~0.2.4",
+    "ndarray": "~1.0.0",
     "rle-core": "~0.0.7",
     "rle-repair": "~0.0.4",
     "rle-extents": "0.0.0"
   },
   "devDependencies": {
-    "ndarray-fill": "~0.0.0",
-    "tape": "~1.0.4"
+    "ndarray-fill": "~0.1.0",
+    "tape": "~1.0.4",
+    "zeros": "0.0.0"
   },
   "scripts": {
     "test": "tap test/*.js"
